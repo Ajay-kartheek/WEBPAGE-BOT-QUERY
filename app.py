@@ -75,7 +75,7 @@ st.title("WEBPAGE QUERY BOT 🤖")
 # sidebar
 with st.sidebar:
     st.header("Settings")
-    website_url = st.text_input("Website URL")
+    website_url = st.text_input("Enter the website URL where you would like to ask question on... ")
 
 if website_url is None or website_url == "":
     st.info("Please enter a website URL")
@@ -84,7 +84,7 @@ else:
     # session state
     if "chat_history" not in st.session_state:
         st.session_state.chat_history = [
-            AIMessage(content="Hello, I am a Ajay. How can I help you?"),
+            AIMessage(content=f"Hello, You are all set to ask questions from {website_url}. I'm AJ, How can I help you?"),
         ]
     if "vector_store" not in st.session_state:
         st.session_state.vector_store = get_vectorstore_from_url(website_url)    
