@@ -78,7 +78,7 @@ with st.sidebar:
     website_url = st.text_input("Enter the website URL where you would like to ask question on... ")
 
 if website_url is None or website_url == "":
-    st.info("Please enter a website URL")
+    st.info("Ready to explore? Paste on a website URL in the sidebar to kickstart our chat adventure!!!")
 
 else:
     # session state
